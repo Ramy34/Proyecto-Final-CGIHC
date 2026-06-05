@@ -1,17 +1,45 @@
-# Proyecto-Final
-Proyecto final de la materia del Laboratorio de Computación Gráfica e Interacción Humano-Computadora del grupo 03 del semestre 2019-1 de la Facultad de Ingeniería
+# Proyecto Final - CGIHC
 
-Proyecto Final.
-El alumno, presentará como proyecto final, un escenario tridimensional, el cual constará principalmente con:
-a) Edificio Q (Luis G Valdés Vallejo). El alumno creará la fachada del edificio, para ello propondrá las dimensiones que utilizará.
-b) Dentro de un piso del edificio, el alumno creará la reconstrucción del Laboratorio de Computación Gráfica de la Facultad de Ingeniería.
-Para estos elementos, el alumno utilizará las técnicas de modelado geométrico, modelado jerárquico y texturizado para construir los elementos con base a primitivas.
-d) El alumno agregará al menos cinco (5) elementos con animaciones complejas diferentes. Al menos una de esas animaciones deberá ser por la técnica de KeyFrames. Queda a criterio del alumno los objetos a animar, pero deben tener relación con el escenario que se está construyendo. PROHIBIDO ocupar las animaciones creadas durante las sesiones de laboratorio y teoría.
-e) Junto con los archivos de código, modelos, texturas y de audio, que el alumno utilizó para crear el escenario, entregará un manual de uso de la aplicación.
-f) Se deberá navegar el escenario mediante una implementación de la cámara sintética.
-El alumno puede agregar elementos para formar un escenario más grande y complejo. Se otorgarán puntos extra dependiendo de la originalidad de los elementos.
-Participantes:
--	Podrán formar equipos hasta de 4 personas. Dichos integrantes pueden ser de diferentes grupos.
--	Es responsabilidad del alumno la selección de integrantes del equipo, por lo que las acciones de alguno de los miembros del equipo repercute en todos los integrantes.
--	Cualquier uso no autorizado de proyectos de semestres anteriores, o contenido generado por otro equipo llevará a, dependiendo la gravedad de la falta, una calificación de cero en el rubro de proyecto o a tener una calificación reprobatoria en la materia.
-Cualquier otro punto no previsto en este documento será tratado entre el profesor y las personas involucradas.
+Proyecto final de la materia del Laboratorio de Computación Gráfica e Interacción Humano-Computadora del grupo 03 del semestre 2019-1 de la Facultad de Ingeniería, UNAM.
+
+## Descripción del Proyecto
+
+Este proyecto es una aplicación gráfica en 3D desarrollada en C++ utilizando **OpenGL**. Presenta una reconstrucción interactiva de la fachada del **Edificio Q (Luis G Valdés Vallejo)** y el interior del **Laboratorio de Computación Gráfica** de la Facultad de Ingeniería.
+
+El entorno fue construido usando modelado geométrico con base en primitivas, modelado jerárquico y mapeo de texturas para representar con precisión el laboratorio.
+
+## Características Principales
+
+- **Renderizado 3D**: Modelado detallado del salón, que incluye pisos, techos, paredes, ventanas, puertas, pizarrones, escritorios, computadoras (CPUs, monitores y teclados) y sillas.
+- **Sistema de Texturas**: Uso extensivo de texturas (ladrillos, concreto, escudos, madera, metales y plásticos) cargadas con `SOIL2` y `stb_image`.
+- **Cámara Sintética**: Sistema de cámara libre en primera persona para navegar por todo el entorno usando teclado y ratón.
+- **Modelos Externos**: Soporte para la carga de modelos 3D complejos (`.obj`) mediante la librería `Assimp`.
+
+## Controles de Navegación y Animaciones
+
+El proyecto cuenta con múltiples componentes dinámicos con animaciones interactivas que pueden ser activadas por el usuario:
+
+### Movimiento (Cámara)
+- `W` : Mover hacia adelante
+- `S` : Mover hacia atrás
+- `A` : Mover a la izquierda
+- `D` : Mover a la derecha
+- `Ratón` : Controlar la dirección de la vista (apuntar)
+
+### Animaciones Interactivas
+- `P` : Abrir / Cerrar las puertas corredizas del laboratorio.
+- `C` : Animar las computadoras (movimiento articulado de los monitores).
+- `E` : Activar el elevador (subir / bajar de piso).
+- `Q` : Activar el aire acondicionado (rotación de aspas/ventilación).
+
+### Sistema
+- `ESC` : Salir de la aplicación.
+
+## Tecnologías y Dependencias Usadas
+
+- C++
+- **OpenGL**
+- **GLFW** y **GLEW** (Manejo de ventanas y contexto)
+- **GLM** (OpenGL Mathematics)
+- **SOIL2 / stb_image** (Carga y procesamiento de texturas)
+- **Assimp** (Open Asset Import Library, carga de modelos `.obj`)
